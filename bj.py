@@ -5,7 +5,7 @@ from streamlit_option_menu import option_menu
 
 
 ## teste
-st.set_page_config(page_title="TCS DeepConsultant", 
+st.set_page_config(page_title="BJ Houdini", 
                     page_icon=":🧠:",
                     layout="wide")
 
