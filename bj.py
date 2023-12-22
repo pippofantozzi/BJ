@@ -25,7 +25,7 @@ dub = "Just "
 split_it = ""
 if state in double:
   dub = "Double it and "
-if ((state in split) or (your_sum == 12 and has_a)) and your_sum < 20:
+if ((state in split) or (your_sum == 12 and has_a)) and int(your_sum) < 20:
   split_it = "(Split It! or) "
 
 if state != " without A + ":
