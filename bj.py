@@ -4,6 +4,7 @@ from streamlit_option_menu import option_menu
 
 hit = list(pd.read_csv('Hit_If.csv')['Hit If'])
 double = list(pd.read_csv('Double_If.csv')['Double If'])
+split = list(pd.read_csv('Correct_Splits.csv')['Split'])
 
 ## teste
 st.set_page_config(page_title="BJ Houdini", 
@@ -21,12 +22,18 @@ else:
 
 state = f'{your_sum} {has_a} + {dealers_card}' 
 dub = "Just "
+split_it = ""
 if state in double:
   dub = "Double it and "
+if (state in split) or (your_sum == 12 and has_a):
+  split_it = "(Split It! or) "
+
 if state in hit:
-    st.header(f"{dub}Hit it!")
+  st.header(f"{split_it}{dub} Hit It!") 
 else:
-    st.header("Dont Hit!") 
+  st.header(f"{split_it}Dont Hit!")
+
+
 
 
 
