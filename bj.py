@@ -2,7 +2,8 @@ import pandas as pd
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-
+hit = list(pd.read_csv('Hit_If.csv')['Hit If'])
+double = list(pd.read_csv('Double_If.csv')['Double If'])
 
 ## teste
 st.set_page_config(page_title="BJ Houdini", 
@@ -18,11 +19,15 @@ if has_a:
 else:
     has_a = 'without A'
 
-
-df = pd.read_csv('Odds.csv')
-
 state = f'{your_sum} {has_a} + {dealers_card}' 
-prob_not_loss = df.loc[df['State'] == state, 'Not Losing Chance']
-st.title(f'Probability of Not Losing: {str(prob_not_loss)}')
+dub = "Just "
+if state in double:
+  dub = "Double it and "
+if state in hit:
+    st.header(f"{dub}Hit it!")
+else:
+    st.header("Dont Hit!") 
+
+
 
 
