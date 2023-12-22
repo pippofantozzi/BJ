@@ -32,7 +32,7 @@ if state != "":
   if state in hit:
     st.header(f"{split_it}{dub} Hit It!") 
   else:
-    st.header(f"{split_it}Dont Hit!")
+    st.header(f"{split_it}Dont Hit! {state}")
 
 
 
