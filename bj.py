@@ -28,7 +28,7 @@ if state in double:
 if (state in split) or (your_sum == 12 and has_a):
   split_it = "(Split It! or) "
 
-if state != "without A +":
+if state != " without A + ":
   if state in hit:
     st.header(f"{split_it}{dub} Hit It!") 
   else:
