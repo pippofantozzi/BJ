@@ -27,7 +27,7 @@ if state in double:
   dub = "Double it and "
 
 
-if (state != " without flexible A + ") or  (state != " with flexible A + "):
+if (state != " without flexible A + ") and  (state != " with flexible A + "):
   if state in hit:
     st.header(f"{split_it}{dub} Hit It!") 
   else:
