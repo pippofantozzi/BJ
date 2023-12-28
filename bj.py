@@ -38,11 +38,12 @@ st.markdown("---")
 st.title("Some Rules:")
 st.markdown("---")
 st.text("- This method assumes you always play the same initial bet in each hand")
-st.text("- This method assumes you should prioritize splitting over hitting when prompted to do so")
-st.text("- This method assumes that you should only split or double if you have sufficient capital")
+st.text("- This method assumes that you should only double if you have sufficient capital")
 st.text("- This method assumes that if your initial bet is always $10, and you have $6 remaining, you bet $6 (whatever is left)") 
-st.text("Keep in mind: Still not 100% sure about splitting method, but try it for now, except just ignore when it says to split and do whatever is next to it")
 
+st.text("Just tried it with a 4 deck blackjack simulator, and after multiple hands, doubled the initial capital with $100 bets, starting with $1000, first try")
+st.image("doubled.JPG")
+st.image("doubled2.JPG")
 
 
 
